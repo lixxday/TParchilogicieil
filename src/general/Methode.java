@@ -1,5 +1,10 @@
 package general;
 
-public interface Methode {
+import java.util.ArrayList;
 
+public interface Methode {
+	public String getNom();
+	public ArrayList<String> getTypeParam();
+	public String getTypeRetour();
+	
 }
