@@ -1,2 +1,4 @@
 # TParchilogicieil
-TP Architecture logiciel en trinôme
+TP Architecture logiciel en trinome
+
+
