@@ -1,5 +1,7 @@
 package general;
 
-public interface Constructeur {
+import java.util.ArrayList;
 
+public interface Constructeur {
+	public ArrayList<String> getTypeParam();
 }

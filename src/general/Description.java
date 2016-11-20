@@ -1,10 +1,12 @@
 package general;
 
+import java.util.ArrayList;
+
 public interface Description {
 
-	public Constructeur[] getConstructeurs();
-	public Attribut[] getAttributs();
-	public Methode[] getMethodes();
-	public Relation[] getRelations();
+	public ArrayList<Constructeur> getConstructeurs();
+	public ArrayList<Attribut> getAttributs();
+	public ArrayList<Methode> getMethodes();
+	public ArrayList<Relation> getRelations();
 	
 }
