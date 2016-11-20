@@ -1,7 +1,6 @@
 package general.impl;
 
 import java.util.ArrayList;
-
 import general.Diagramme;
 import general.Etiquette;
 import general.Type;
@@ -28,6 +27,7 @@ public class DiagrammeImpl implements Diagramme {
 	@Override
 	public ArrayList<Etiquette> getEtiquettes() {
 		return this.etiquettes;
+	
 	}
 
 	

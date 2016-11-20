@@ -9,5 +9,4 @@ public interface Type {
 	public Description getDescription();
 	public void setPosition(String paquet);
 	
-	
 }
