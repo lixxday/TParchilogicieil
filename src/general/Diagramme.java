@@ -1,10 +1,11 @@
 package general;
 
+import java.util.ArrayList;
+
 public interface Diagramme {
 	
-	public Type[] getTypes();
-	public Description[] getDescriptions();
-	public Etiquette[] getEtiquettes();
+	public ArrayList<Type> getTypes();
+	public ArrayList<Etiquette> getEtiquettes();
 		
 
 }
