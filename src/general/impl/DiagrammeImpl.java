@@ -1,30 +1,35 @@
 package general.impl;
 
-import general.Description;
+import java.util.ArrayList;
+
 import general.Diagramme;
 import general.Etiquette;
 import general.Type;
 
 public class DiagrammeImpl implements Diagramme {
 	
+	ArrayList<Type> types;
+	ArrayList<Etiquette> etiquettes;
 	
+	public DiagrammeImpl(){
+		this.types = new ArrayList<Type>();
+		this.etiquettes = new ArrayList<Etiquette>();
+	}
 
+	public DiagrammeImpl(ArrayList<Type> types, ArrayList<Etiquette> etiquettes){
+		this.types = types;
+		this.etiquettes = etiquettes;
+	}
 	@Override
-	public Type[] getTypes() {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Type> getTypes() {
+		return this.types;
 	}
 
 	@Override
-	public Description[] getDescriptions() {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Etiquette> getEtiquettes() {
+		return this.etiquettes;
 	}
 
-	@Override
-	public Etiquette[] getEtiquettes() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }
