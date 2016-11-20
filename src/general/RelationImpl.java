@@ -2,7 +2,13 @@ package general;
 
 public class RelationImpl implements Relation {
 	private String javaRelation;
-	private String parent;
+	private Type parent;
+	//private Fleche fleche;
+	
+	public RelationImpl(String javaRelation, Type parent){
+		this.javaRelation = javaRelation;
+		this.parent = parent;
+	}
 
 	@Override
 	public String getJavaRelation() {
@@ -13,7 +19,7 @@ public class RelationImpl implements Relation {
 	@Override
 	public String getParent() {
 		// TODO Auto-generated method stub
-		return this.parent;
+		return this.parent.getNom();
 	}
 
 }
