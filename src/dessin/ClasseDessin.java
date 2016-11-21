@@ -1,5 +1,6 @@
 package dessin;
 
+import general.Description;
 import general.Type;
 
 public class ClasseDessin implements ElementDeDessin{
@@ -14,6 +15,8 @@ public class ClasseDessin implements ElementDeDessin{
 	public void dessiner() {
 		// TODO dessiner en vrai
 		System.out.println("Classe " + classe.getNom());
+		
+		Description description = classe.getDescription();
 	}
 
 	

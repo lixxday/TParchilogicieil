@@ -45,5 +45,6 @@ public class JavaClass implements Type {
 	public Description getDescription() {
 		return this.description;
 	}
+	
 
 }
