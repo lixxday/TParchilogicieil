@@ -20,10 +20,12 @@ public class InterfaceDessin implements ElementDeDessin {
 			if(inter.getDescription().getMethodes().get(i).getTypeParam().size() > 0){
 				methodes += ")";
 			}
+			methodes += "parametre de sortie : " + inter.getDescription().getMethodes().get(i).getTypeRetour();
 		}
-		System.out.println("Interface : " + inter.getNom() + "/n -------------------------------------- /n" 
+		System.out.println("/n -------------------------------------- /n" 
+				+ "Interface : " + inter.getNom() + "/n -------------------------------------- /n" 
 				+ "Package : " + inter.getPackage() + "/n -------------------------------------- /n"
-				+ "Methode"
+				+ methodes + "/n -------------------------------------- /n"
 				);
 	}
 
