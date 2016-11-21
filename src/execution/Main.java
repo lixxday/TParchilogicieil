@@ -2,7 +2,10 @@ package execution;
 
 import dessin.ClasseDessin;
 import dessin.ElementDeDessin;
+import dessin.EtiquetteDessin;
+import general.Etiquette;
 import general.Type;
+import general.impl.EtiquetteImpl;
 import general.impl.JavaClass;
 
 public class Main {
@@ -16,6 +19,12 @@ public class Main {
 		ElementDeDessin d = new ClasseDessin(classe);
 		
 		d.dessiner();
+		
+		System.out.println("Creation d'une etiquette");
+		Etiquette etiquette = new EtiquetteImpl("Coucou");
+		ElementDeDessin ett = new EtiquetteDessin(etiquette);
+		
+		ett.dessiner();
 		
 	}
 	
