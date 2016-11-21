@@ -33,9 +33,4 @@ public class RelationImpl implements Relation {
 		return this.parent;
 	}
 
-	@Override
-	public String getParent() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

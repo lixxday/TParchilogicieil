@@ -23,14 +23,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Test de creation d'un diagramme");
-		System.out.println("---------------------------");
-		System.out.println("Creation d'une classe vide");
-		System.out.println("---------------------------");
-	
 		Type classe = new JavaClass();
 		Type classeParent = new JavaInterface("ClasseParent");
 		Relation relation1 = new RelationImpl(classe, "implements",classeParent);
+		
 		System.out.println("Test de creation d'un diagramme : ");
 		System.out.println("Creation d'une classe vide...");
 	
@@ -55,6 +51,8 @@ public class Main {
 		System.out.println("Creation d'une etiquette...");
 		Etiquette etiquette = new EtiquetteImpl("Coucou");
 		ElementDeDessin ett = new EtiquetteDessin(etiquette);
+		
+		ett.dessiner();
 		
 		RelationDessin relationDessin = new RelationDessin(relation1);
 		relationDessin.dessiner();
