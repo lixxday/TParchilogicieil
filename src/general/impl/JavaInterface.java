@@ -2,9 +2,9 @@ package general.impl;
 
 import java.util.ArrayList;
 
+import general.Description;
 import general.Attribut;
 import general.Constructeur;
-import general.Description;
 import general.Methode;
 import general.Relation;
 import general.Type;
@@ -56,6 +56,19 @@ public class JavaInterface implements Type {
 	public void setPackage(String paquet) {
 		this.nomPackage = paquet;
 
+	}
+
+	@Override
+	public ArrayList<Relation> getRelations() {
+		// TODO Auto-generated method stub
+		return this.description.getRelations();
+	}
+	
+	public void setDescription(ArrayList<Constructeur> constructeurs, ArrayList<Attribut> attributs,
+			ArrayList<Methode> methodes, ArrayList<Relation> relations) {
+		Description des = new DescriptionImpl(constructeurs, attributs, methodes, relations);
+		
+		this.description = des;
 	}
 
 }

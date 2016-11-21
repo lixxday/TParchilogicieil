@@ -2,7 +2,11 @@ package general;
 
 public interface Relation {
 	
+	/**
+	 * @return relation java. Extends ou Implements
+	 */
 	public String getJavaRelation();
-	public String getParent();
+	public Type getRelationParent();
+	Type getChild();
 	
 }

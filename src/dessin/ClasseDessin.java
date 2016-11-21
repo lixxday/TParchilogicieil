@@ -1,7 +1,9 @@
 package dessin;
 
+import general.Attribut;
 import general.Description;
 import general.Type;
+import general.impl.AttributImpl;
 
 public class ClasseDessin implements ElementDeDessin{
 
@@ -14,9 +16,18 @@ public class ClasseDessin implements ElementDeDessin{
 	@Override
 	public void dessiner() {
 		// TODO dessiner en vrai
+		
+		// Head
 		System.out.println("Classe " + classe.getNom());
 		
-		Description description = classe.getDescription();
+		
+		//Description
+		System.out.println("---------------------------");
+		if (classe.getDescription() != null) {
+			System.out.println(classe.getDescription().toString());
+			
+		}
+		
 	}
 
 	
