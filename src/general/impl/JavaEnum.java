@@ -2,7 +2,14 @@ package general.impl;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 import general.Description;
+=======
+import general.Attribut;
+import general.Constructeur;
+import general.Description;
+import general.Methode;
+>>>>>>> master
 import general.Relation;
 import general.Type;
 
@@ -11,14 +18,14 @@ public class JavaEnum implements Type {
 	private String nom;
 	private String nomPackage;
 	private Description description;
-	
+
 	@Override
 	public String getNom() {
 		return this.nom;
 	}
 
 	@Override
-	public String getPosition() {
+	public String getPackage() {
 		return this.nomPackage;
 	}
 
@@ -33,14 +40,22 @@ public class JavaEnum implements Type {
 	}
 
 	@Override
-	public void setPosition(String paquet) {
+	public void setPackage(String paquet) {
 		this.nomPackage = paquet;
 	}
 
 	@Override
+<<<<<<< HEAD
 	public ArrayList<Relation> getRelations() {
 		// TODO Auto-generated method stub
 		return this.description.getRelations();
+=======
+	public void setDescription(ArrayList<Constructeur> constructeurs, ArrayList<Attribut> attributs,
+			ArrayList<Methode> methodes, ArrayList<Relation> relations) {
+		Description des = new DescriptionImpl(constructeurs, attributs, methodes, relations);
+
+		this.description = des;
+>>>>>>> master
 	}
 
 }
