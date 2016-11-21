@@ -64,4 +64,44 @@ public class DescriptionImpl implements Description {
 		return str;
 	}
 
+	@Override
+	public boolean addAttribut(Attribut attr) {
+		return this.attributs.add(attr);
+	}
+
+	@Override
+	public boolean addConstructeur(Constructeur constr) {
+		return this.constructeurs.add(constr);
+	}
+
+	@Override
+	public boolean addMethode(Methode meth) {
+		return this.methodes.add(meth);
+	}
+
+	@Override
+	public boolean addRelation(Relation rel) {
+		return this.relations.add(rel);
+	}
+
+	@Override
+	public boolean removeAttribut(Attribut attr) {
+		return this.attributs.remove(attr);
+	}
+
+	@Override
+	public boolean removeConstructeur(Constructeur constr) {
+		return this.constructeurs.remove(constr);
+	}
+
+	@Override
+	public boolean removeMethode(Methode meth) {
+		return this.methodes.remove(meth);
+	}
+
+	@Override
+	public boolean removeRelation(Relation rel) {
+		return this.relations.remove(rel);
+	}
+
 }
