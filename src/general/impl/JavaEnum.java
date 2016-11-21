@@ -1,6 +1,9 @@
 package general.impl;
 
+import java.util.ArrayList;
+
 import general.Description;
+import general.Relation;
 import general.Type;
 
 public class JavaEnum implements Type {
@@ -32,6 +35,12 @@ public class JavaEnum implements Type {
 	@Override
 	public void setPosition(String paquet) {
 		this.nomPackage = paquet;
+	}
+
+	@Override
+	public ArrayList<Relation> getRelations() {
+		// TODO Auto-generated method stub
+		return this.description.getRelations();
 	}
 
 }

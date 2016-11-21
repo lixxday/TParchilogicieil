@@ -1,6 +1,9 @@
 package general.impl;
 
+import java.util.ArrayList;
+
 import general.Description;
+import general.Relation;
 import general.Type;
 
 public class JavaClass implements Type {
@@ -44,6 +47,12 @@ public class JavaClass implements Type {
 	@Override
 	public Description getDescription() {
 		return this.description;
+	}
+
+	@Override
+	public ArrayList<Relation> getRelations() {
+		// TODO Auto-generated method stub
+		return this.description.getRelations();
 	}
 	
 

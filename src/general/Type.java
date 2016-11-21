@@ -1,5 +1,7 @@
 package general;
 
+import java.util.ArrayList;
+
 public interface Type {
 	
 	public String getNom();
@@ -8,7 +10,8 @@ public interface Type {
 	
 	public Description getDescription();
 	public void setPosition(String paquet);
-	public String getJavaRelation();
-	public Type getRelationParent();
+//	public String getJavaRelation();
+//	public Type getRelationParent();
+	public ArrayList<Relation> getRelations();
 	
 }

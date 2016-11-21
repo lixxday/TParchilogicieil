@@ -5,18 +5,21 @@ import general.Type;
 
 public class RelationDessin implements ElementDeDessin {
 
-	private Type type;
+	private Type depart;
 	private Relation relation;
+	private Type parent;
 
-	public RelationDessin(Type classeDepart, Relation r) {
-		this.type = classeDepart;
+	public RelationDessin(Relation r) {
+		this.parent = r.getRelationParent();
 		this.relation = r;
+		this.depart = r.getChild();
 	}
 
 	@Override
 	public void dessiner() {
-		System.out.println(type.getJavaType() + type.getNom() + relation.getJavaRelation()
-				+ relation.getRelationParent().getNom());
+		System.out.println("Relation(s) :");
+		System.out.println(depart.getJavaType() + " " + depart.getNom() + " " + relation.getJavaRelation() + " "
+				+ parent.getNom());
 	}
 
 }

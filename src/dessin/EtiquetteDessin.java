@@ -15,7 +15,7 @@ public class EtiquetteDessin implements ElementDeDessin {
 	public void dessiner() {
 		// TODO Dessiner en vrai
 		
-		System.out.println(this.ett.getContenu());
+		System.out.println("Etiquette : " + this.ett.getContenu());
 	}
 
 }
