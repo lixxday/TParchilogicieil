@@ -9,4 +9,6 @@ public interface Description {
 	public ArrayList<Methode> getMethodes();
 	public ArrayList<Relation> getRelations();
 	
+	public String toString();
+	
 }
