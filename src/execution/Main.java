@@ -27,7 +27,6 @@ public class Main {
 	
 		Type classe = new JavaClass();
 		Type classeParent = new JavaInterface("ClasseParent");
-		ElementDeDessin d = new ClasseDessin(classe);
 		Relation relation1 = new RelationImpl(classe, "implements",classeParent);
 		System.out.println("Test de creation d'un diagramme : ");
 		System.out.println("Creation d'une classe vide...");

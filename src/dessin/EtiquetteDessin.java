@@ -1,7 +1,6 @@
 package dessin;
 
 import general.Etiquette;
-import general.impl.EtiquetteImpl;
 
 public class EtiquetteDessin implements ElementDeDessin {
 
