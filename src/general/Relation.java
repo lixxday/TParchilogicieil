@@ -13,5 +13,9 @@ public interface Relation {
 	 * 
 	 * @return classe qui contient la relation dans sa description
 	 */
+<<<<<<< HEAD
+=======
+	public String getParent();
+>>>>>>> master
 	
 }

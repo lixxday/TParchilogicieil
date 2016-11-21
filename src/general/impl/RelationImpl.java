@@ -1,4 +1,7 @@
-package general;
+package general.impl;
+
+import general.Relation;
+import general.Type;
 
 public class RelationImpl implements Relation {
 	private Type child;
@@ -28,6 +31,12 @@ public class RelationImpl implements Relation {
 	public Type getRelationParent() {
 		// TODO Auto-generated method stub
 		return this.parent;
+	}
+
+	@Override
+	public String getParent() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

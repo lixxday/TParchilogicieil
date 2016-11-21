@@ -2,9 +2,12 @@ package general.impl;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+import general.Description;
+>>>>>>> master
 import general.Attribut;
 import general.Constructeur;
-import general.Description;
 import general.Methode;
 import general.Relation;
 import general.Type;
@@ -45,7 +48,11 @@ public class JavaEnum implements Type {
 		// TODO Auto-generated method stub
 		return this.description.getRelations();
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> master
 	public void setDescription(ArrayList<Constructeur> constructeurs, ArrayList<Attribut> attributs,
 			ArrayList<Methode> methodes, ArrayList<Relation> relations) {
 		Description des = new DescriptionImpl(constructeurs, attributs, methodes, relations);

@@ -2,9 +2,12 @@ package general.impl;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+import general.Description;
+>>>>>>> master
 import general.Attribut;
 import general.Constructeur;
-import general.Description;
 import general.Methode;
 import general.Relation;
 import general.Type;
@@ -64,11 +67,19 @@ public class JavaClass implements Type {
 
 		this.description = des;
 	}
+<<<<<<< HEAD
 
 	@Override
 	public void setPosition(String paquet) {
 		// TODO Auto-generated method stub
 		
 	}
+=======
+>>>>>>> master
 
+	@Override
+	public void setPosition(String paquet) {
+		// TODO Auto-generated method stub
+		
+	}
 }
