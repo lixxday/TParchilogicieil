@@ -32,6 +32,10 @@ public class JavaInterface implements Type {
 		this.description = description;
 	}
 	
+	public JavaInterface(String nom){
+		this.nom = nom;
+	}
+	
 	@Override
 	public String getNom() {
 		return this.nom;

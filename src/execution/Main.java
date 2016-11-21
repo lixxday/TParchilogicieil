@@ -6,10 +6,7 @@ import dessin.ClasseDessin;
 import dessin.ElementDeDessin;
 import dessin.EnumDessin;
 import dessin.EtiquetteDessin;
-<<<<<<< HEAD
 import dessin.InterfaceDessin;
-=======
->>>>>>> 397529a1ff8cf3414b2b56d15409f13e6cc84ded
 import dessin.RelationDessin;
 import general.Attribut;
 import general.Etiquette;
@@ -32,8 +29,7 @@ public class Main {
 		System.out.println("---------------------------");
 	
 		Type classe = new JavaClass();
-		Type classeParent = new JavaInterface(classe,"implements" , classeParent);
-		ElementDeDessin d = new ClasseDessin(classe);
+		Type classeParent = new JavaInterface("ClasseParent");
 		Relation relation1 = new RelationImpl(classe, "implements",classeParent);
 		System.out.println("Test de creation d'un diagramme : ");
 		System.out.println("Creation d'une classe vide...");

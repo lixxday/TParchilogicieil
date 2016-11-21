@@ -1,9 +1,6 @@
 package dessin;
 
-import general.Attribut;
-import general.Description;
 import general.Type;
-import general.impl.AttributImpl;
 
 public class ClasseDessin implements ElementDeDessin{
 

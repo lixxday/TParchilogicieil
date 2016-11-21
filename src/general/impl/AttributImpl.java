@@ -1,13 +1,11 @@
 package general.impl;
 
-import javax.swing.Icon;
-
 import general.Attribut;
 
 public class AttributImpl implements Attribut {
 	private String nom;
 	private String type;
-	private Icon icone;
+	//private Icon icone;
 	
 	public AttributImpl(String nom, String type){
 		this.type = type;
