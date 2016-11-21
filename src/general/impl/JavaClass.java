@@ -65,4 +65,9 @@ public class JavaClass implements Type {
 		this.description = des;
 	}
 
+	@Override
+	public void setPosition(String paquet) {
+		// TODO Auto-generated method stub
+		
+	}
 }

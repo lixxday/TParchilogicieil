@@ -9,4 +9,10 @@ public interface Relation {
 	public Type getRelationParent();
 	Type getChild();
 	
+	/**
+	 * 
+	 * @return classe qui contient la relation dans sa description
+	 */
+	public String getParent();
+	
 }

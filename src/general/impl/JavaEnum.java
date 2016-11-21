@@ -2,7 +2,6 @@ package general.impl;
 
 import java.util.ArrayList;
 
-
 import general.Description;
 import general.Attribut;
 import general.Constructeur;
@@ -60,12 +59,16 @@ public class JavaEnum implements Type {
 		// TODO Auto-generated method stub
 		return this.description.getRelations();
 	}
-
 	public void setDescription(ArrayList<Constructeur> constructeurs, ArrayList<Attribut> attributs,
 			ArrayList<Methode> methodes, ArrayList<Relation> relations) {
 		Description des = new DescriptionImpl(constructeurs, attributs, methodes, relations);
 
 		this.description = des;
+	}
+
+	@Override
+	public void setPosition(String paquet) {
+		// TODO Auto-generated method stub
 	}
 
 }

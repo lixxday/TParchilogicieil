@@ -64,11 +64,17 @@ public class JavaInterface implements Type {
 		return this.description.getRelations();
 	}
 	
-	public void setDescription(ArrayList<Constructeur> constructeurs, ArrayList<Attribut> attributs,
+		public void setDescription(ArrayList<Constructeur> constructeurs, ArrayList<Attribut> attributs,
 			ArrayList<Methode> methodes, ArrayList<Relation> relations) {
 		Description des = new DescriptionImpl(constructeurs, attributs, methodes, relations);
 		
 		this.description = des;
 	}
+
+		@Override
+		public void setPosition(String paquet) {
+			// TODO Auto-generated method stub
+			
+		}
 
 }

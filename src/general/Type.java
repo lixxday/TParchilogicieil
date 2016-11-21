@@ -13,5 +13,7 @@ public interface Type {
 			ArrayList<Methode> methodes, ArrayList<Relation> relations);
 	public void setPackage(String paquet);
 	ArrayList<Relation> getRelations();
-	
+	public void setPosition(String paquet);
+//	public String getJavaRelation();
+//	public Type getRelationParent();
 }

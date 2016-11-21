@@ -6,29 +6,40 @@ import dessin.ClasseDessin;
 import dessin.ElementDeDessin;
 import dessin.EnumDessin;
 import dessin.EtiquetteDessin;
+<<<<<<< HEAD
 import dessin.InterfaceDessin;
+=======
+>>>>>>> 397529a1ff8cf3414b2b56d15409f13e6cc84ded
 import dessin.RelationDessin;
 import general.Attribut;
 import general.Etiquette;
 import general.Relation;
-import general.RelationImpl;
 import general.Type;
 import general.impl.AttributImpl;
 import general.impl.EtiquetteImpl;
 import general.impl.JavaClass;
 import general.impl.JavaEnum;
 import general.impl.JavaInterface;
+import general.impl.RelationImpl;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-
+		System.out.println("Test de creation d'un diagramme");
+		System.out.println("---------------------------");
+		System.out.println("Creation d'une classe vide");
+		System.out.println("---------------------------");
+	
+		Type classe = new JavaClass();
+		Type classeParent = new JavaInterface(classe,"implements" , classeParent);
+		ElementDeDessin d = new ClasseDessin(classe);
+		Relation relation1 = new RelationImpl(classe, "implements",classeParent);
 		System.out.println("Test de creation d'un diagramme : ");
 		System.out.println("Creation d'une classe vide...");
 	
-		Type classe = new JavaClass();
-		ElementDeDessin c = new ClasseDessin(classe);
+		Type classe1 = new JavaClass();
+		ElementDeDessin c = new ClasseDessin(classe1);
 		
 		c.dessiner();
 		
@@ -38,9 +49,9 @@ public class Main {
 		Attribut attr = new AttributImpl("attribut", "Integer");
 		ArrayList<Attribut> l = new ArrayList<Attribut>();
 		l.add(attr);
-		classe.setDescription(null, l, null, null);
+		classe1.setDescription(null, l, null, null);
 		
-		ElementDeDessin classe2 = new ClasseDessin(classe);
+		ElementDeDessin classe2 = new ClasseDessin(classe1);
 		classe2.dessiner();
 		
 		
@@ -49,7 +60,6 @@ public class Main {
 		Etiquette etiquette = new EtiquetteImpl("Coucou");
 		ElementDeDessin ett = new EtiquetteDessin(etiquette);
 		
-		Relation relation1 = new RelationImpl(classe, null, classe);
 		RelationDessin relationDessin = new RelationDessin(relation1);
 		relationDessin.dessiner();
 		
