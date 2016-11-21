@@ -4,6 +4,10 @@ import general.Type;
 
 public class InterfaceDessin implements ElementDeDessin {
 	private Type inter;
+	
+	public InterfaceDessin(Type inter){
+		this.inter = inter;
+	}
 
 	@Override
 	public void dessiner() {
