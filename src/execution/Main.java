@@ -9,12 +9,12 @@ import dessin.RelationDessin;
 import general.Attribut;
 import general.Etiquette;
 import general.Relation;
-import general.RelationImpl;
 import general.Type;
 import general.impl.AttributImpl;
 import general.impl.EtiquetteImpl;
 import general.impl.JavaClass;
 import general.impl.JavaInterface;
+import general.impl.RelationImpl;
 
 public class Main {
 
@@ -35,6 +35,7 @@ public class Main {
 		Type classe1 = new JavaClass();
 		ElementDeDessin c = new ClasseDessin(classe1);
 		
+		d.dessiner();
 		c.dessiner();
 		
 		System.out.println("");
