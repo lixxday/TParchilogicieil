@@ -21,6 +21,16 @@ public class DescriptionImpl implements Description {
 		this.methodes = new ArrayList<Methode>();
 		this.relations = new ArrayList<Relation>();
 	}
+	
+	public DescriptionImpl(ArrayList<Constructeur> listeConstructeur,
+			ArrayList<Attribut> listeAttribut,
+			ArrayList<Methode> listeMethode,
+			ArrayList<Relation> listeRelation){
+		this.constructeurs = listeConstructeur;
+		this.attributs = listeAttribut;
+		this.methodes = listeMethode;
+		this.relations = listeRelation;
+	}
 
 	@Override
 	public ArrayList<Constructeur> getConstructeurs() {
