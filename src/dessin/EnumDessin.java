@@ -13,16 +13,16 @@ public class EnumDessin implements ElementDeDessin {
 	@Override
 	public void dessiner() {
 		// TODO Auto-generated method stub
-		String attributs = "Attributs : ";
+		String attributs = "Attributs : \n";
 		
 		for(int i=0; i<enu.getDescription().getAttributs().size();i++){
-			attributs += enu.getDescription().getAttributs().get(i).getNom().toUpperCase() +"/n";
+			attributs += enu.getDescription().getAttributs().get(i).getNom().toUpperCase() +"\n";
 		}
 		
-		System.out.println("/n -------------------------------------- /n" 
-				+ "Enum : " + enu.getNom() + "/n -------------------------------------- /n" 
-				+ "Package : " + enu.getPackage() + "/n -------------------------------------- /n"
-				+ attributs + "-------------------------------------- /n"
+		System.out.println("\n -------------------------------------- \n"
+				+ "Enum : " + enu.getNom() + "\n -------------------------------------- \n" 
+				+ "Package : " + enu.getPackage() + "\n -------------------------------------- \n"
+				+ attributs + "\n-------------------------------------- \n"
 				);
 
 	}
