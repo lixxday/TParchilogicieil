@@ -9,17 +9,26 @@ import general.Methode;
 import general.Relation;
 
 public class DescriptionImpl implements Description {
-	
+
 	public ArrayList<Constructeur> constructeurs;
 	public ArrayList<Attribut> attributs;
 	public ArrayList<Methode> methodes;
 	public ArrayList<Relation> relations;
-	
+
 	public DescriptionImpl() {
 		this.constructeurs = new ArrayList<Constructeur>();
 		this.attributs = new ArrayList<Attribut>();
 		this.methodes = new ArrayList<Methode>();
 		this.relations = new ArrayList<Relation>();
+	}
+
+	public DescriptionImpl(ArrayList<Constructeur> constructeurs, ArrayList<Attribut> attributs,
+			ArrayList<Methode> methodes, ArrayList<Relation> relations) {
+
+		this.constructeurs = constructeurs;
+		this.attributs = attributs;
+		this.methodes = methodes;
+		this.relations = relations;
 	}
 
 	@Override
@@ -41,18 +50,17 @@ public class DescriptionImpl implements Description {
 	public ArrayList<Relation> getRelations() {
 		return this.relations;
 	}
-	
-	
+
 	public String toString() {
 		String Newligne = System.getProperty("line.separator");
-		
+
 		String str = "";
-		str += "Attributs : " + this.attributs.toString();
+		str += "Attributs : " + this.attributs;
 		str += Newligne;
-		str += "Constructeurs : " + this.constructeurs.toString();
+		str += "Constructeurs : " + this.constructeurs;
 		str += Newligne;
-		str += "Methodes : " + this.methodes.toString();
-		
+		str += "Methodes : " + this.methodes;
+
 		return str;
 	}
 
