@@ -17,9 +17,11 @@ public class RelationImpl implements Relation {
 	}
 
 	@Override
-	public String getParent() {
+	public Type getRelationParent() {
 		// TODO Auto-generated method stub
-		return this.parent.getNom();
+		return this.parent;
 	}
+
+
 
 }

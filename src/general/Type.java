@@ -8,5 +8,7 @@ public interface Type {
 	
 	public Description getDescription();
 	public void setPosition(String paquet);
+	public String getJavaRelation();
+	public Type getRelationParent();
 	
 }
