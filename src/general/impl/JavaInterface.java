@@ -21,7 +21,7 @@ public class JavaInterface implements Type {
 	}
 
 	@Override
-	public String getPosition() {
+	public String getPackage() {
 		return this.nomPackage;
 	}
 
@@ -36,7 +36,7 @@ public class JavaInterface implements Type {
 	}
 
 	@Override
-	public void setPosition(String paquet) {
+	public void setPackage(String paquet) {
 		this.nomPackage = paquet;
 
 	}

@@ -32,12 +32,12 @@ public class JavaClass implements Type {
 	}
 
 	@Override
-	public String getPosition() {
+	public String getPackage() {
 		return nomPackage;
 	}
 
 	@Override
-	public void setPosition(String paquet) {
+	public void setPackage(String paquet) {
 		// TODO Auto-generated method stub
 		this.nomPackage = paquet;
 	}
