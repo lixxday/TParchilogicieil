@@ -34,12 +34,12 @@ public class Visiteur implements IVisiteur {
 		
 		ArrayList<String> constrs = new ArrayList<String>();
 		for (int i = 0; i < constructeurs.length; i++) {
-			constrs.add(constructeurs[i].getName());
+			constrs.add("Constructeur : " + constructeurs[i].getName());
 		}
 		
 		ArrayList<String> meths = new ArrayList<String>();
 		for (int i = 0; i < methods.length; i++) {
-			meths.add(methods[i].getName());
+			meths.add("Methode : " + methods[i].getName());
 		}
 		contenu.addAll(constrs);
 		contenu.addAll(meths);
@@ -54,7 +54,7 @@ public class Visiteur implements IVisiteur {
 		dependances.addAll(mesInterfaces);
 		dependances.add(superclasse.getTypeName());
 		
-		return new Rectangle(nom, contenu, dependances);
+		return new Rectangle("Classe " + nom, contenu, dependances);
 		
 	}
 
