@@ -4,7 +4,7 @@ public class Visiteur implements IVisiteur {
 
 	@Override
 	public void visit(IVisitable o) {
-		System.out.println("Ceci n'est pas implémenté");
+		System.out.println("Ceci n'est pas implemente");
 	}
 
 	@Override
