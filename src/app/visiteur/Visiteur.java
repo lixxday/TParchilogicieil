@@ -25,7 +25,6 @@ public class Visiteur implements IVisiteur {
 		String nom = classe.getSimpleName();
 		Constructor<?>[] constructeurs = classe.getDeclaredConstructors();
 		Method[] methods = classe.getDeclaredMethods();
-
 		Type[] interfaces = classe.getGenericInterfaces();
 		Type superclasse = classe.getGenericSuperclass();
 
@@ -34,22 +33,34 @@ public class Visiteur implements IVisiteur {
 
 		ArrayList<String> constrs = new ArrayList<String>();
 		for (int i = 0; i < constructeurs.length; i++) {
-			// constrs.add("Constructeur : " + constructeurs[i].getName() +
-			// " (");
 			String paramTypes = "";
 			if (constructeurs[i].getParameterCount() > 0) {
 				Class<?>[] typesParam = constructeurs[i].getParameterTypes();
 				for (int j = 0; j < typesParam.length; j++)
-					paramTypes += typesParam[j].getSimpleName();
-			}
-			constrs.add("Constructeur No." + (i+1) + " : " + nom + "(" + paramTypes
-					+ ")");
+					if (j == typesParam.length-1){
+						paramTypes += typesParam[j].getSimpleName() + "";						
+					}else {
+						paramTypes += typesParam[j].getSimpleName() + ", ";
+					}				}
+			constrs.add("Constructeur No." + (i + 1) + " : " + nom + "("
+					+ paramTypes + ")");
 		}
 
 		ArrayList<String> meths = new ArrayList<String>();
 		for (int i = 0; i < methods.length; i++) {
-			meths.add("Methode : " + methods[i].getName());
+			String paramTypes = "";
+			if (methods[i].getParameterCount() > 0) {
+				Class<?>[] typesParam = methods[i].getParameterTypes();
+				for (int j = 0; j < typesParam.length; j++) {
+					if (j == typesParam.length-1){
+						paramTypes += typesParam[j].getSimpleName() + "";						
+					}else {
+						paramTypes += typesParam[j].getSimpleName() + ", ";
+					}				}
+			}
+			meths.add("Methode : " + methods[i].getName() + "(" + paramTypes + ")");
 		}
+
 		contenu.addAll(constrs);
 		contenu.addAll(meths);
 
@@ -80,7 +91,18 @@ public class Visiteur implements IVisiteur {
 		ArrayList<String> methodesI = new ArrayList<String>();
 		Method[] listMethodesI = monInterface.getMethods();
 		for (int j = 0; j < listMethodesI.length; j++) {
-			methodesI.add("Methode : " + listMethodesI[j].getName());
+			String paramTypes = "";
+			if (listMethodesI[j].getParameterCount() > 0) {
+				Class<?>[] typesParam = listMethodesI[j].getParameterTypes();
+				for (int n = 0; n < typesParam.length; n++) {
+					if (n == typesParam.length-1){
+						paramTypes += typesParam[n].getSimpleName() + "";						
+					}else {
+						paramTypes += typesParam[n].getSimpleName() + ", ";
+					}
+				}
+			}
+			methodesI.add("Methode : " + listMethodesI[j].getName() + "(" + paramTypes + ")");
 		}
 
 		// Recuperer la liste des interfaces qu'implemente l'interface
@@ -90,10 +112,9 @@ public class Visiteur implements IVisiteur {
 			relationsSupI.add(listRelationsSupI[j].getTypeName());
 		}
 
-
-		//Retourner un Rectangle avec toutes les infos sur l'interface
+		// Retourner un Rectangle avec toutes les infos sur l'interface
 		return new Rectangle("Interface " + nomI, methodesI, relationsSupI);
-		
+
 	}
 
 }

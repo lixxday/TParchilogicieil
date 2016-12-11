@@ -15,9 +15,6 @@ public class Main {
 
 	public static void main(String[] args) {
 
-//		ClassRepresentation maClasse1 = new ClassRepresentation(MaClasse1.class);
-//		ClassRepresentation maClasse2 = new ClassRepresentation(MaClasse2.class);
-//		InterfaceRepresentation monInterface1 = new InterfaceRepresentation(MonInterface1.class);
 		IVisiteur visiteur = new Visiteur();
 		Graphique graph = new Graphique();
 		Dessineur dessineur = new Dessineur(graph);
