@@ -22,9 +22,9 @@ public class Visiteur implements IVisiteur {
 		Class<?> classe = c.getMyClass();
 		
 		// Get the specifications
-		String nom = classe.getName();
-		Constructor<?>[] constructeurs = classe.getConstructors();
-		Method[] methods = classe.getMethods();
+		String nom = classe.getSimpleName();
+		Constructor<?>[] constructeurs = classe.getDeclaredConstructors();
+		Method[] methods = classe.getDeclaredMethods();
 		
 		Type[] interfaces = classe.getGenericInterfaces();
 		Type superclasse = classe.getGenericSuperclass();

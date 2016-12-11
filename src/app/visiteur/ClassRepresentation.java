@@ -4,8 +4,8 @@ public class ClassRepresentation implements IVisitable {
 
 	private Class<?> myClass;
 
-	public ClassRepresentation(Object o) {
-		this.myClass = o.getClass();
+	public ClassRepresentation(Class<?> o) {
+		this.myClass = o;
 	}
 	
 	public Class<?> getMyClass() {
