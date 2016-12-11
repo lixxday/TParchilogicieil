@@ -3,6 +3,7 @@ package app.main;
 import app.base.Graphique;
 import app.representation.Dessineur;
 import app.representation.RetourConsole;
+import app.representation.RetourSVG;
 import app.test.maClasse1;
 import app.test.maClasse2;
 import app.test.monInterface1;
@@ -27,7 +28,7 @@ public class Main {
 		graph.addGraphique(visiteur.visit(maClasse2));
 		
 		Dessineur dessineur = new Dessineur(graph);
-		RetourConsole retour = new RetourConsole();
+		RetourSVG retour = new RetourSVG();
 		
 		dessineur.visit(retour);
 	}
