@@ -25,4 +25,12 @@ public class Rectangle {
 	public ArrayList<String> getDependances() {
 		return this.dependances;
 	}
+	
+	public String toString() {
+		
+		return "Rectangle : \n" + 
+				"\n nom : " + this.nom + 
+				"\n contenu : " + this.contenu + 
+				"\n dependances : " + this.dependances;
+	}
 }
