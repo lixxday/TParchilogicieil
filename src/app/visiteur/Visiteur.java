@@ -14,11 +14,12 @@ public class Visiteur implements IVisiteur {
 	}
 
 	@Override
-	public void visit(ClassRepresentation c) {
+	public Rectangle visit(ClassRepresentation c) {
 
 		Class<?> classe = c.getMyClass();
 
 		String nom = classe.getName();
+		return null;
 
 		// return new Rectangle(nom, contenu, dependances);
 
