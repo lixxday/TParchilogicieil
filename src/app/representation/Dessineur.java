@@ -50,11 +50,11 @@ public class Dessineur implements IDessineur {
 		// TODO Auto-generated method stub
 		String s = "<?xml version=\"1.0\" standalone=\"no\"?>" + "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" "
 				+ "\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">"
-				+ "<svg width=\"100%\" height=\"100%\" version=\"1.1\"" + "xmlns=\"http://www.w3.org/2000/svg\">"
-				+ "<title>Mon premier document SVG !</title>";
-		String sg = "<g>";
-		String sDef = "<defs>";
-		String sSeul = "";
+				+ "\n <svg width=\"100%\" height=\"100%\" version=\"1.1\"" + "xmlns=\"http://www.w3.org/2000/svg\">"
+				+ "\n <title>Mon premier document SVG !</title>";
+		String sg = "\n <g>";
+		String sDef = "\n <defs>";
+		String sSeul = "\n";
 		int x = 10;
 		int y = 10;
 		int height = 0;
@@ -83,14 +83,15 @@ public class Dessineur implements IDessineur {
 					}
 					String[] PosArrivee = { listPos.get(l - 1)[1], listPos.get(l - 1)[2] };
 					sSeul += "<line x1=\"" + PosDepart[0] + "\" y1=\"" + PosDepart[1] + "\" x2=\"" + PosArrivee[0]
-							+ "\" y2=\"" + PosArrivee[1] + "\"  style=\" stroke:#26CD22;\" />";
+							+ "\" y2=\"" + PosArrivee[1] + "\"  style=\" stroke:#26CD22;\" /> \n";
 				}
 			}
 		}
 		sg += "</g>";
 		sDef += "</defs>";
-		sSeul = "</svg>";
+		sSeul += "</svg>";
 		s += sDef + sg + sSeul;
+		System.out.println(s);
 
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(new File("Diagramme.svg")));
