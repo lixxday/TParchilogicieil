@@ -3,9 +3,9 @@ package app.main;
 import app.base.Graphique;
 import app.representation.Dessineur;
 import app.representation.RetourConsole;
-import app.test.maClasse1;
-import app.test.maClasse2;
-import app.test.monInterface1;
+import app.test.MaClasse1;
+import app.test.MaClasse2;
+import app.test.MonInterface1;
 import app.visiteur.ClassRepresentation;
 import app.visiteur.IVisiteur;
 import app.visiteur.InterfaceRepresentation;
@@ -15,9 +15,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ClassRepresentation maClasse1 = new ClassRepresentation(maClasse1.class);
-		ClassRepresentation maClasse2 = new ClassRepresentation(maClasse2.class);
-		InterfaceRepresentation monInterface1 = new InterfaceRepresentation(monInterface1.class);
+		ClassRepresentation maClasse1 = new ClassRepresentation(MaClasse1.class);
+		ClassRepresentation maClasse2 = new ClassRepresentation(MaClasse2.class);
+		InterfaceRepresentation monInterface1 = new InterfaceRepresentation(MonInterface1.class);
 		
 		IVisiteur visiteur = new Visiteur();
 		
