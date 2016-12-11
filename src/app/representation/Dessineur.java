@@ -21,7 +21,6 @@ public class Dessineur implements IDessineur {
 	@Override
 	public void visit(RetourConsole o) {
 		// TODO Auto-generated method stub
-		ArrayList<String> listString = new ArrayList<String>();
 		String s = "-------------------------------------------------------" + "\n";
 		for(int i=0; i<this.g.getListRectangle().size();i++){
 			s += "---- " + g.getListRectangle().get(i).getNom();
@@ -33,6 +32,7 @@ public class Dessineur implements IDessineur {
 				s += "--" + g.getListRectangle().get(i).getContenu().get(j) + "--" + "\n";
 			}
 		}
+		System.out.println(s);
 	}
 
 	@Override
