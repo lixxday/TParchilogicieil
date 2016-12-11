@@ -70,7 +70,7 @@ public class Visiteur implements IVisiteur {
 		ArrayList<String> methodesI = new ArrayList<String>();
 		Method[] listMethodesI = monInterface.getMethods();		
 		for (int j = 0; j < listMethodesI.length; j++) {
-			methodesI.add(listMethodesI[j].getName());
+			methodesI.add("Methode : " + listMethodesI[j].getName());
 		}
 
 		//Recuperer la liste des interfaces qu'implemente l'interface
@@ -81,7 +81,7 @@ public class Visiteur implements IVisiteur {
 		}
 
 		//Retourner un Rectangle avec toutes les infos sur l'interface
-		return new Rectangle(nomI, methodesI, relationsSupI);
+		return new Rectangle("Interface " + nomI, methodesI, relationsSupI);
 		
 	}
 
