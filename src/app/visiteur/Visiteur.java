@@ -22,7 +22,7 @@ public class Visiteur implements IVisiteur {
 		Class<?> classe = c.getMyClass();
 
 		// Get the specifications
-		String nom = classe.getSimpleName();
+		String nom = "Classe " + classe.getSimpleName();
 		Constructor<?>[] constructeurs = classe.getDeclaredConstructors();
 		Method[] methods = classe.getDeclaredMethods();
 
@@ -63,7 +63,7 @@ public class Visiteur implements IVisiteur {
 		dependances.addAll(mesInterfaces);
 		dependances.add(superclasse.getTypeName());
 
-		return new Rectangle("Classe " + nom, contenu, dependances);
+		return new Rectangle(nom, contenu, dependances);
 
 	}
 
@@ -74,7 +74,7 @@ public class Visiteur implements IVisiteur {
 		Class<?> monInterface = i.getMyInterface();
 
 		// Recuperer le nom de l'interface
-		String nomI = monInterface.getName();
+		String nomI = "Interface " +  monInterface.getName();
 
 		// Recuperer la liste de methodes dans l'interface
 		ArrayList<String> methodesI = new ArrayList<String>();
@@ -92,7 +92,7 @@ public class Visiteur implements IVisiteur {
 
 
 		//Retourner un Rectangle avec toutes les infos sur l'interface
-		return new Rectangle("Interface " + nomI, methodesI, relationsSupI);
+		return new Rectangle(nomI, methodesI, relationsSupI);
 		
 	}
 
