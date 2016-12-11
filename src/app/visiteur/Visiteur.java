@@ -22,7 +22,8 @@ public class Visiteur implements IVisiteur {
 		Class<?> classe = c.getMyClass();
 
 		// Get the specifications
-		String nom = "Classe " + classe.getSimpleName();
+		String nom = classe.getSimpleName();
+		String type = "Classe";
 		Constructor<?>[] constructeurs = classe.getDeclaredConstructors();
 		Method[] methods = classe.getDeclaredMethods();
 		Type[] interfaces = classe.getGenericInterfaces();
@@ -30,9 +31,10 @@ public class Visiteur implements IVisiteur {
 
 		// Remplir le contenu
 		ArrayList<String> contenu = new ArrayList<String>();
-
 		ArrayList<String> constrs = new ArrayList<String>();
+		
 		for (int i = 0; i < constructeurs.length; i++) {
+
 			String paramTypes = "";
 			if (constructeurs[i].getParameterCount() > 0) {
 				Class<?>[] typesParam = constructeurs[i].getParameterTypes();
@@ -47,6 +49,7 @@ public class Visiteur implements IVisiteur {
 		}
 
 		ArrayList<String> meths = new ArrayList<String>();
+		
 		for (int i = 0; i < methods.length; i++) {
 			String paramTypes = "";
 			if (methods[i].getParameterCount() > 0) {
@@ -66,15 +69,19 @@ public class Visiteur implements IVisiteur {
 
 		// Recuperer les dependances
 		ArrayList<String> dependances = new ArrayList<String>();
-
 		ArrayList<String> mesInterfaces = new ArrayList<String>();
+		
 		for (int i = 0; i < interfaces.length; i++) {
 			mesInterfaces.add(interfaces[i].getTypeName());
 		}
-		dependances.addAll(mesInterfaces);
-		dependances.add(superclasse.getTypeName());
-
-		return new Rectangle(nom, contenu, dependances);
+		
+		for (int i = 0; i < mesInterfaces.size(); i++) {
+			dependances.add(mesInterfaces.get(i).substring(mesInterfaces.get(i).lastIndexOf(".") + 1));
+		}
+		
+		dependances.add(superclasse.getTypeName().substring(superclasse.getTypeName().lastIndexOf(".") + 1));
+		
+		return new Rectangle(nom, type, contenu, dependances);
 
 	}
 
@@ -85,7 +92,8 @@ public class Visiteur implements IVisiteur {
 		Class<?> monInterface = i.getMyInterface();
 
 		// Recuperer le nom de l'interface
-		String nomI = "Interface " +  monInterface.getName();
+		String nomI = monInterface.getSimpleName();
+		String type = "Interface";
 
 		// Recuperer la liste de methodes dans l'interface
 		ArrayList<String> methodesI = new ArrayList<String>();
@@ -108,13 +116,20 @@ public class Visiteur implements IVisiteur {
 		// Recuperer la liste des interfaces qu'implemente l'interface
 		ArrayList<String> relationsSupI = new ArrayList<String>();
 		Type[] listRelationsSupI = monInterface.getGenericInterfaces();
+		
 		for (int j = 0; j < listRelationsSupI.length; j++) {
 			relationsSupI.add(listRelationsSupI[j].getTypeName());
 		}
-
+		
+		for (int j = 0; j < listRelationsSupI.length; j++) {
+			relationsSupI.add(relationsSupI.get(j).substring(relationsSupI.get(j).lastIndexOf(".") + 1));
+		}
 
 		//Retourner un Rectangle avec toutes les infos sur l'interface
-		return new Rectangle(nomI, methodesI, relationsSupI);
-			}
+
+		return new Rectangle(nomI, type, methodesI, relationsSupI);
+		
+	}
+
 
 }
