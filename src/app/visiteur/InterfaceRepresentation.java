@@ -4,8 +4,8 @@ public class InterfaceRepresentation implements IVisitable{
 
 	private Class<?> myInterface;
 	
-	public InterfaceRepresentation (Object o) {
-		this.myInterface = o.getClass();
+	public InterfaceRepresentation (Class<?> o) {
+		this.myInterface = o;
 	}
 	
 	public Class<?> getMyInterface() {

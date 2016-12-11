@@ -14,6 +14,7 @@ public class Main {
 		
 		maClasse.accept(visiteur);
 		System.out.println(visiteur.visit(maClasse).toString());
+		System.out.println("\n" + InterfaceRepresentation.class.getDeclaredMethods()[0].getName());
 	}
 
 }
