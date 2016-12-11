@@ -15,19 +15,24 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ClassRepresentation maClasse1 = new ClassRepresentation(MaClasse1.class);
-		ClassRepresentation maClasse2 = new ClassRepresentation(MaClasse2.class);
-		InterfaceRepresentation monInterface1 = new InterfaceRepresentation(MonInterface1.class);
-		
+//		ClassRepresentation maClasse1 = new ClassRepresentation(MaClasse1.class);
+//		ClassRepresentation maClasse2 = new ClassRepresentation(MaClasse2.class);
+//		InterfaceRepresentation monInterface1 = new InterfaceRepresentation(MonInterface1.class);
 		IVisiteur visiteur = new Visiteur();
-		
 		Graphique graph = new Graphique();
-		graph.addGraphique(visiteur.visit(maClasse1));
-		graph.addGraphique(visiteur.visit(monInterface1));
-		graph.addGraphique(visiteur.visit(maClasse2));
-		
 		Dessineur dessineur = new Dessineur(graph);
 		RetourConsole retour = new RetourConsole();
+		
+		
+		ClassRepresentation maClasse1 = new ClassRepresentation(MaClasse1.class);
+		graph.addGraphique(visiteur.visit(maClasse1));
+		
+		ClassRepresentation maClasse2 = new ClassRepresentation(MaClasse2.class);
+		graph.addGraphique(visiteur.visit(maClasse2));
+		
+		InterfaceRepresentation monInterface1 = new InterfaceRepresentation(MonInterface1.class);
+		graph.addGraphique(visiteur.visit(monInterface1));
+		
 		
 		dessineur.visit(retour);
 	}
