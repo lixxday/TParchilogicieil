@@ -1,7 +1,7 @@
 # TParchilogicieil
 TP Architecture logiciel en trinome : Florian, Yang et Corentin
 
-	1 - Lancer des tests, creer un diagramme
+	- Lancer des tests, creer un diagramme
 Pour créer un diagramme à partir d'un projet existant  :
 
 - Créer un visiteur
@@ -33,17 +33,5 @@ public static void Main(String[] args) {
 	
 }
 
-	2 - Ajouter un type (exemple : enum)
-On utilise le patron visiteur:
-
-Prenons un exemple : on souhaite ajouter les Enum.
-
-On commence par créer une representation de Enum
-Dans app.visiteur, on ajoute une classe EnumRepresentation qui implement IVisitable.
-
-Dans IVisiteur, on ajoute la methode 'Rectangle visit(EnumRepresentation o);
-Dans Visiteur, on implemente la methode declaree dans IVisiteur pour qu'elle retourne un Rectangle
-   Rectangle(nom de l'enum, contenu=liste des enum, dependances)
-
-	3 - Ajouter une représentation (jpeg)
+	
 
