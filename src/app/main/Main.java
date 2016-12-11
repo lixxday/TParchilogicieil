@@ -2,7 +2,7 @@ package app.main;
 
 import app.base.Graphique;
 import app.representation.Dessineur;
-import app.representation.RetourConsole;
+import app.representation.IDessineur;
 import app.representation.RetourSVG;
 import app.test.MaClasse1;
 import app.test.MaClasse2;
@@ -19,16 +19,15 @@ public class Main {
 		ClassRepresentation maClasse1 = new ClassRepresentation(MaClasse1.class);
 		ClassRepresentation maClasse2 = new ClassRepresentation(MaClasse2.class);
 		InterfaceRepresentation monInterface1 = new InterfaceRepresentation(MonInterface1.class);
+		
 		IVisiteur visiteur = new Visiteur();
 		Graphique graph = new Graphique();
+		IDessineur dessineur = new Dessineur(graph);
+		RetourSVG retour = new RetourSVG();
 		
 		graph.addGraphique(visiteur.visit(maClasse1));		
 		graph.addGraphique(visiteur.visit(maClasse2));
 		graph.addGraphique(visiteur.visit(monInterface1));
-		
-		Dessineur dessineur = new Dessineur(graph);
-		RetourSVG retour = new RetourSVG();
-
 		
 		dessineur.visit(retour);
 	}
