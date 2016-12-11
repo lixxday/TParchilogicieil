@@ -2,6 +2,6 @@ package app.test;
 
 public interface MonInterface1 {
 	
-	String methodeString();
+	String methodeString(int i);
 
 }
