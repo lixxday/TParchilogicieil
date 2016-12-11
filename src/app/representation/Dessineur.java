@@ -50,7 +50,7 @@ public class Dessineur implements IDessineur {
 		// TODO Auto-generated method stub
 		String s = "<?xml version=\"1.0\" standalone=\"no\"?>" + "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" "
 				+ "\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">"
-				+ "\n <svg width=\"100%\" height=\"100%\" version=\"1.1\"" + "xmlns=\"http://www.w3.org/2000/svg\">"
+				+ "\n <svg width=\"1000\" height=\"1000\" version=\"1.1\"" + " xmlns=\"http://www.w3.org/2000/svg\">"
 				+ "\n <title>Mon premier document SVG !</title>";
 		String sg = "\n <g>";
 		String sDef = "\n <defs>";
@@ -58,16 +58,17 @@ public class Dessineur implements IDessineur {
 		int x = 10;
 		int y = 10;
 		int height = 0;
-		int width = 0;
+		int width = 250;
 		ArrayList<String[]> listPos = new ArrayList<String[]>();
 		ArrayList<Rectangle> rectangles = g.getListRectangle();
 
 		for (int i = 0; i < rectangles.size(); i++) {
-			height = rectangles.get(i).getContenu().size() * 10 + 10;
-			sSeul += "<rect x=\"" + x + "\" y=\"" + y + "\" + width=\"" + width + "\" height=\"" + height + "\" /> \n";
+			height = (rectangles.get(i).getContenu().size()-1) * 50 + 200;
+			sSeul += "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + width + "\" height=\"" + height + "\"  style=\" fill:#FFFFFF; stroke:#1F56D2\" /> \n";
+			sSeul += "<text x=\"" + (x + 75) + "\" y=\"" + (y + 25) + "\" >" + rectangles.get(i).getNom() + " </text>";
 			String[] toAdd = { rectangles.get(i).getNom(), "" + x, "" + y };
 			listPos.add(toAdd);
-			y += height + 10;
+			y += height + 50;
 		}
 		
 		
