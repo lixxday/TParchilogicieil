@@ -69,6 +69,8 @@ public class Dessineur implements IDessineur {
 			listPos.add(toAdd);
 			y += height + 10;
 		}
+		
+		
 		for (int j = 0; j < rectangles.size(); j++) {
 			for (int k = 0; k < rectangles.get(j).getDependances().size(); k++) {
 				String nomArrive = rectangles.get(j).getDependances().get(k);
@@ -79,7 +81,7 @@ public class Dessineur implements IDessineur {
 						System.out.println("Nom dans la liste : " + listPos.get(l)[0] + "; nomArrivee = " + nomArrive);
 						l++;
 					}
-					String[] PosArrivee = { listPos.get(l)[1], listPos.get(l)[2] };
+					String[] PosArrivee = { listPos.get(l - 1)[1], listPos.get(l - 1)[2] };
 					sSeul += "<line x1=\"" + PosDepart[0] + "\" y1=\"" + PosDepart[1] + "\" x2=\"" + PosArrivee[0]
 							+ "\" y2=\"" + PosArrivee[1] + "\"  style=\" stroke:#26CD22;\" />";
 				}
