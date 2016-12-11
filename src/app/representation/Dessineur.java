@@ -68,7 +68,7 @@ public class Dessineur implements IDessineur {
 
 		for (int i = 0; i < rectangles.size(); i++) {
 			height = (rectangles.get(i).getContenu().size()-1) * 30 + 100;
-			sSeul += "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + width + "\" height=\"" + height + "\"  style=\" fill:#FFFFFF; stroke:#1F56D2\" /> \n";
+			sSeul += "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + width + "\" height=\"" + height + "\"  style=\" fill:#26CD22; stroke:#1F56D2\" /> \n";
 			sSeul += "<text x=\"" + (x + 75) + "\" y=\"" + (y + 25) + "\" style=\"font-size:25;\">" + rectangles.get(i).getNom() + " </text>";
 			for(int m=0; m<rectangles.get(i).getContenu().size(); m++){
 				sSeul += "<text x=\"" + (x+5) + "\" y=\"" + (y + 75 + m*20) + "\" >" + rectangles.get(i).getContenu().get(m) + " </text>";
@@ -78,23 +78,23 @@ public class Dessineur implements IDessineur {
 			y += height + 50;
 		}
 		
-		
+		int num = 0;
 		for (int j = 0; j < rectangles.size(); j++) {
-			int num = 0;
 			for (int k = 0; k < rectangles.get(j).getDependances().size(); k++) {
 				String nomArrive = rectangles.get(j).getDependances().get(k);
 				String[] PosDepart = { listPos.get(j)[1], listPos.get(j)[2] };
 				int l = 0;
 				if (nomArrive != "java.lang.Object") {
-					while (l<listPos.size() && listPos.get(l)[0] != nomArrive) {
-						System.out.println(listPos.get(l)[0] + " == " + nomArrive);
+					while (l<listPos.size() && !listPos.get(l)[0].equals(nomArrive)) {
 						l++;
 					}
-					String[] PosArrivee = { listPos.get(l - 1)[1], listPos.get(l - 1)[2] };
-					sSeul += "<line x1=\"" + (140+num) + "\" y1=\"" + PosDepart[1] + "\" x2=\"" + (140+num)
-							+ "\" y2=\"" + PosArrivee[1] + "\"  style=\" stroke:#000000; stroke-linecap:round;\" /> \n";
+					if(l < listPos.size()){
+						String[] PosArrivee = { listPos.get(l)[1], listPos.get(l)[2] };
+						sSeul += "<line x1=\"" + (140+num) + "\" y1=\"" + PosDepart[1] + "\" x2=\"" + (140+num)
+								+ "\" y2=\"" + PosArrivee[1] + "\"  style=\" stroke:#000000; stroke-linecap:round;  stroke-opacity:0.5;\" /> \n";
+						num = num + 5;
+					}
 				}
-				num = num + 5;
 			}
 		}
 		sg += "</g>";
