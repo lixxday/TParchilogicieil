@@ -1,6 +1,6 @@
 package app.test;
 
-public interface monInterface1 {
+public interface MonInterface1 {
 	
 	String methodeString();
 
