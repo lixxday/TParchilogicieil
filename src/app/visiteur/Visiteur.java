@@ -1,5 +1,7 @@
 package app.visiteur;
 
+import app.base.Rectangle;
+
 public class Visiteur implements IVisiteur {
 
 	@Override
@@ -16,6 +18,14 @@ public class Visiteur implements IVisiteur {
 		
 		//return new Rectangle(nom, contenu, dependances);
 		
+	}
+
+	@Override
+	public void visit(InterfaceRepresentation i) {
+		
+		Class<?> monInterface = i.getMyInterface();
+		
+		String nom = monInterface.getName();
 	}
 
 }
