@@ -16,5 +16,9 @@ public class Graphique {
 	public void addGraphique(Rectangle r){
 		this.listRectangle.add(r);
 	}
+	
+	public ArrayList<Rectangle> getListRectangle(){
+		return this.listRectangle;
+	}
 
 }
